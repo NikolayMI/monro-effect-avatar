@@ -1,7 +1,7 @@
 from PIL import Image
 
 
-image = Image.open(r"C:\Users\Azerty\OneDrive\Рабочий стол\example\restored.jpg")
+image = Image.open("monro.jpg")
 red, green, blue = image.split()
 
 
@@ -19,8 +19,8 @@ green_cropped = green.crop((100, 0, green.width - 100, green.height))
 
 
 final = Image.merge("RGB", (red_shifted, green_cropped, blue_shifted))
-final.save(r"C:\Users\Azerty\OneDrive\Рабочий стол\example\final.jpg")
+final.save("final.jpg")
 
 
 final.thumbnail((80, 80))
-final.save(r"C:\Users\Azerty\OneDrive\Рабочий стол\example\avatar.jpg")
+final.save("avatar.jpg")
